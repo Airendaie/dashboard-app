@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="time-widget">
+            <div id="current-time" class="time"></div>
+            <div id="current-date" class="date"></div>
+        </div>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <span class="material-symbols-outlined">search</span>
+                <form action="https://www.google.com/search" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Search Google..." autocomplete="off">
+                </form>
+            </div>
+            <div class="search-box">
+                <span class="material-symbols-outlined">search</span>
+                <form action="https://you.com/search" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Search You.com..." autocomplete="off">
+                </form>
+            </div>
+        </div>
+
+        <div id="tile-container" class="tile-grid">
+            <!-- Tiles will be dynamically added here -->
+        </div>
+    </div>
+
+    <div id="add-tile-modal" class="modal">
+        <div class="modal-content">
+            <span class="material-symbols-outlined close">close</span>
+            <h2>Add New Tile</h2>
+            <form id="add-tile-form">
+                <input type="text" id="tile-name" placeholder="Tile Name" required>
+                <input type="url" id="tile-url" placeholder="Website URL" required>
+                <select id="tile-icon">
+                    <option value="home">Home</option>
+                    <option value="mail">Email</option>
+                    <option value="calendar_month">Calendar</option>
+                    <option value="code">GitHub</option>
+                    <option value="chat">Slack</option>
+                    <option value="cloud">Drive</option>
+                    <option value="forum">Chat</option>
+                </select>
+                <button type="submit">Add Tile</button>
+            </form>
+        </div>
+    </div>
+
+    <button id="add-tile-btn" class="add-tile-btn">
+        <span class="material-symbols-outlined">add</span>
+    </button>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
