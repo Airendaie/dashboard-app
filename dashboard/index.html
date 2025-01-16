@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="time-widget">
+            <div id="current-time" class="time"></div>
+            <div id="current-date" class="date"></div>
+        </div>
+        
+        <div id="tile-container" class="tile-grid">
+            <!-- Tiles will be dynamically added here -->
+        </div>
+    </div>
+
+    <div id="add-tile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Tile</h2>
+            <form id="add-tile-form">
+                <input type="text" id="tile-name" placeholder="Tile Name" required>
+                <input type="url" id="tile-url" placeholder="Website URL" required>
+                <select id="tile-icon">
+                    <option value="default">Default Icon</option>
+                    <option value="drive">Google Drive</option>
+                    <option value="outlook">Outlook</option>
+                    <option value="calendar">Calendar</option>
+                    <option value="github">GitHub</option>
+                    <option value="slack">Slack</option>
+                    <option value="whatsapp">WhatsApp</option>
+                </select>
+                <button type="submit">Add Tile</button>
+            </form>
+        </div>
+    </div>
+
+    <button id="add-tile-btn" class="add-tile-btn">+</button>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
